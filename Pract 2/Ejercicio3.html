@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio3.css">
+    <title>Ejercicio 3</title>
+    <script>
+        function Corregir()
+        {
+            var nota1 = 0;
+            var nota2 = 0;
+            var nota3 = 0;
+            var nota4 = 0;
+            var nota5 = 0;
+            var notaf = nota1+nota2;
+            if (document.getElementById("profe2").checked)
+            {
+                var nota1 = 2;
+            }
+            else
+            {
+                var nota1 = 0;
+            }
+            if (document.getElementById("asignatura3").checked)
+            {
+                var nota2 = 2;
+            }
+            else
+            {
+                var nota2 = 0;
+            }
+            if (document.getElementById("bit2").checked)
+            {
+                var nota3 = 2;
+            }
+            else
+            {
+                var nota3 = 0;
+            }
+            if (document.getElementById("comentario1").checked)
+            {
+                var nota4 = 2;
+            }
+            else
+            {
+                var  nota4 = 0;
+            }
+            if (document.getElementById("comando4").checked)
+            {
+                var nota5 = 2;
+            }
+            else
+            {
+                var nota5 = 0;
+            }
+            var notaf = nota1+nota2+nota3+nota4+nota5;
+            alert("Su nota final es de: "+notaf);
+        }
+        
+    </script>
+</head>
+<body>
+    <form name="ejercicio3">
+        <div class="pregunta">
+            <p class="texto">1. ¿Quién es el mejor profesor?</p>
+            <p class="texto">Seleccione una respuesta:</p>
+            <input type="radio" name="profesor" id="profe1" value="Samuel"> a. Samuel<br>
+            <input type="radio" name="profesor" id="profe2" value="Jose"> b. Jose<br>
+            <input type="radio" name="profesor" id="profe3" value="Carlos"> c. Carlos<br>
+            <input type="radio" name="profesor" id="profe4" value="Ninguna"> d. Ninguna de las anteriores
+            </p>
+        </div>
+        <div class="pregunta">
+            <p class="texto">2. ¿Cuál es la mejor asignatura?</p>
+            <p class="texto">Seleccione una respuesta:</p>
+            <input type="radio" name="asignatura" id="asignatura1" value="Servicios"> a. Servicios en Red<br>
+            <input type="radio" name="asignatura" id="asignatura2" value="AW"> b. Implantación de Aplicaciones Web<br>
+            <input type="radio" name="asignatura" id="asignatura3" value="BBDD"> c. Administración de Base de Datos<br>
+            <input type="radio" name="asignatura" id="asignatura4" value="Ética"> d. Ética Profesional
+            </p>
+        </div>
+        <div class="pregunta">
+            <p class="texto">3. Un bit es representado por:</p>
+            <p class="texto">Seleccione una respuesta:</p>
+            <input type="radio" name="bit" id="bit1" value="Luces"> a. Luces de colores<br>
+            <input type="radio" name="bit" id="bit2" value="Cero"> b. Un Cero o un Uno<br>
+            <input type="radio" name="bit" id="bit3" value="Ceros"> c. Ceros o Unos<br>
+            <input type="radio" name="bit" id="bit4" value="Ninguna"> d. Ninguna de las anteriores
+            </p>
+        </div>
+        <div class="pregunta">
+            <p class="texto">4. ¿Cuál es la forma correcta de escribir un comentario en JavaScript?</p>
+            <p class="texto">Seleccione una respuesta:</p>
+            <input type="radio" name="comentario" id="comentario1" value="Coment1"> a. /* */<br>
+            <input type="radio" name="comentario" id="comentario2" value="Coment2"> b. <¡- !><br>
+            <input type="radio" name="comentario" id="comentario3" value="Coment3"> c. /. ./<br>
+            <input type="radio" name="comentario" id="comentario4" value="Coment4"> d. Ninguna de las anteriores
+            </p>
+        </div>
+        <div class="pregunta">
+            <p class="texto">5. Para administrar y manejar las particiones en Linux se usa el comando:</p>
+            <p class="texto">Seleccione una respuesta:</p>
+            <input type="radio" name="comando" id="comando1" value="fsck"> a. fsck<br>
+            <input type="radio" name="comando" id="comando2" value="grub"> b. grub<br>
+            <input type="radio" name="comando" id="comando3" value="sed"> c. sed<br>
+            <input type="radio" name="comando" id="comando4" value="fdisk"> d. fdisk
+            </p>
+        </div>
+        <div id="boton">
+            <input type="button" value="Corregir" id="nota" onclick="Corregir();">
+        </div>
+    </form>
+</body>
+</html>

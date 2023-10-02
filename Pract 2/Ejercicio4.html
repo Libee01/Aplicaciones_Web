@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio4.css">
+    <title>Ejercicio 4</title>
+    <script>
+        function Validar()
+        {
+            var nombre=document.getElementById("nombre").value.length
+            var papellido = document.getElementById("papellido").value.length
+            var sapellido = document.getElementById("sapellido").value.length
+            var correo = document.getElementById("correo").value.length
+            var email = document.getElementById("correo").value;
+            var arroba = email.indexOf("@");
+            var nafiliado1 = document.getElementById("nafiliado1").value.length
+            var nafiliado2 = document.getElementById("nafiliado2").value.length
+            if (nombre == 0){
+                alert("Nombre sin rellenar")
+                document.getElementById("nombre").focus();
+            }
+            if (papellido == 0){
+                alert("Primer apellido sin rellenar")
+                document.getElementById("papellido").focus();
+            }
+            if (sapellido == 0){
+                alert("Segundo apellido sin rellenar")
+                document.getElementById("sapellido").focus();
+            }
+            if (correo == 0){
+                alert("Correo sin rellenar")
+                document.getElementById("correo").focus();
+            }
+            if (arroba === -1){
+                alert("Correo incorrecto")
+                document.getElementById("correo").focus();
+            }
+            if (nafiliado1 !== 7){
+                alert("El primer número de afiliado debe ser de 7 dígitos")
+                document.getElementById("nafiliado1").focus();
+            }
+            if (nafiliado2 !== 2){
+                alert("El segundo número de afiliado debe ser de 2 dígitos")
+                document.getElementById("nafiliado2").focus();
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <form name="ejercicio4">
+        <span id="titulo">Solicitud del Informe de Vida Laboral</span>
+        <div id="cuadro">
+            <div class="texto">Nombre:</div>
+            <div class="recuadro">
+                <input type="text" name="nombre" id="nombre" maxlength="100" required>
+            </div>
+            <div class="texto">Primer apellido:</div>
+            <div class="recuadro">
+                <input type="text" name="papellido" id="papellido"  maxlength="100" required>
+            </div>
+            <div class="texto">Segundo apellido:</div>
+            <div class="recuadro">
+                <input type="text" name="sapellido" id="sapellido" maxlength="100" required>
+            </div>
+            <div class="texto">Correo Electrónico:</div>
+            <div class="recuadro">
+                <input type="text" name="correo" id="correo" maxlength="100" required>
+            </div>
+            <div class="texto">Número de afiliado a la S.S.:</div>
+            <div class="recuadro">
+                <select name="provincia">
+                    <option value="Coruña">A CORUÑA
+                    <option value="Comercial">MADRID
+                    <option value="Clientes">SEVILLA
+                    <option value="Proveedores">GALICIA
+                </select>
+                / <input type="text" name="nafiliado" id="nafiliado1" size="5"  maxlength="7" required>
+                / <input type="text" name="nafiliado" id="nafiliado2" size="1" maxlength="2" required>
+            </div>
+        </div>
+        <a href="" class="funcion" onclick="Validar();">Enviar</span>
+        <a href="" class="funcion" type="reset">Borrar</span>
+    </form>
+</body>
+</html>

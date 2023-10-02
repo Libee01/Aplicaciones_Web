@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio2.css">
+    <title>Ejercicio 2</title>
+    <script>
+        function CalcularPrecio()
+        {
+            //Opciones extras marcadas
+            var extras = 0;
+            if (document.getElementById("extra1").checked)
+            {
+                var extras = 750;
+            }
+            if (document.getElementById("extra2").checked)
+            {
+                var extras = 200;
+            }
+            if (document.getElementById("extra3").checked)
+            {
+                var extras = 800;
+            }
+            if (document.getElementById("extra4").checked)
+            {
+                var extras = 340;
+            }
+            if (document.getElementById("extra5").checked)
+            {
+                var extras = 800;
+            }
+            else
+            {
+                var extras = 0;
+            }
+            //Condicionales con gasolina y 3 puertas
+            var base = 12000;
+            if (document.getElementById("motor1").checked && document.getElementById("puerta1").checked)
+            {
+                var base = 10000;
+                if (document.getElementById("pintura4").checked)
+                {
+                    var base = 9500;
+                    if (document.getElementById("extra2").checked)
+                    {
+                        var base = base+extras;
+                    }
+                    if (document.getElementById("extra3").checked)
+                    {
+                        var base = 10500;
+                    }
+                    if (document.getElementById("extra4").checked)
+                    {
+                        var base = 9840;
+                    }
+                }
+                if (document.getElementById("pintura5").checked)
+                {
+                    var base = 9400;
+                    if (document.getElementById("extra2").checked)
+                    {
+                        var base = 9600;
+                    }
+                    if (document.getElementById("extra3").checked)
+                    {
+                        var base = 10400;
+                    }
+                    if (document.getElementById("extra4").checked)
+                    {
+                        var base = 9740;
+                    }
+                }
+                if (document.getElementById("pintura1").checked || document.getElementById("pintura2").checked || document.getElementById("pintura3").checked)
+                {
+                    var base = 10000;
+                    if (document.getElementById("extra1").checked)
+                    {
+                        var base = 10750;
+                    }
+                    if (document.getElementById("extra2").checked)
+                    {
+                        var base = 10200;
+                    }
+                    if (document.getElementById("extra3").checked)
+                    {
+                        var base = 10800;
+                    }
+                    if (document.getElementById("extra4").checked)
+                    {
+                        var base = 10340;
+                    }
+                }
+                else
+                {
+                    var base = 10000;
+                }
+            }
+            else
+            {
+                alert("Elija una combinación válida")    
+            }
+            alert("El precio final es de "+base)
+        }
+    </script>
+</head>
+<body>
+    <form name="ejercicio2">
+        <div id="div1">
+            <p class="texto">Configuración del Coche</p>
+        </div>
+        <div class="div2">
+            <p class="texto">Tipo de Motor<br>
+            <input type="radio" name="motores" id="motor1" value="Gasolina"> Gasolina
+            <input type="radio" name="motores" id="motor2" value="Diesel"> Diesel (+1500 E)
+            <input type="radio" name="motores" id="motor3" value="Hibrido"> Híbrido (+3000 E)
+            </p>
+        </div>
+        <div class="div2">
+            <p class="texto">Tipo de Puertas<br>
+            <input type="radio" name="puertas" id="puerta1" value="3puertas"> 3 Puertas (-2000 E) (Solo con Gasolina)
+            <input type="radio" name="puertas" id="puerta2" value="5puertas"> 5 Puertas
+            <input type="radio" name="puertas" id="puerta3" value="familiar"> Familiar (+1500 E)
+            </p>
+        </div>
+        <div class="div2">
+            <p class="texto">Tipo de Pintura<br>
+            <input type="radio" name="pintura" id="pintura1" value="rojo">Rojo
+            <input type="radio" name="pintura" id="pintura2" value="verde">Verde
+            <input type="radio" name="pintura" id="pintura3" value="naranja">Naranja
+            <input type="radio" name="pintura" id="pintura4" value="blanco">Blanco (-500 E)
+            <input type="radio" name="pintura" id="pintura5" value="negro">Negro (-600 E)
+            </p>
+        </div>
+        <div class="div2">
+            <p class="texto">Seleccionar las que se deseen:<br>
+            <input type="checkbox" name="metalizada" id="extra1" value="metal">Metalizada (+750 E) (Solo Rojo, Verde o Naranja)<br>
+            <input type="checkbox" name="llantas" id="extra2" value="llanta">Llantas (+200 E)<br>
+            <input type="checkbox" name="clima" id="extra3" value="climatizador">Climatizador (+800 E)<br>
+            <input type="checkbox" name="gps" id="extra4" value="GPS">GPS (+340 E)<br>
+            <input type="checkbox" name="dvd" id="extra5" value="DVD">DVD (+800 E) (Solo modelo Familiar)
+            </p>
+        </div>
+        <div class="div2">
+            <p class="texto">Total a cobrar<br>
+            <input type="button" value="Calcular" id="precio" onclick="CalcularPrecio();">
+            </p>
+        </div>
+    </form>
+</body>
+</html>

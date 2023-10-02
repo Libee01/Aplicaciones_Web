@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio1.css">
+    <title>Ejercicio 1</title>
+    <script>
+        function Pintar()
+        {
+            var color1 = prompt("Introduce un color");
+            div1.style.backgroundColor = color1;
+        }
+        function CambiarTexto()
+        {
+            var x = document.getElementById('texto');
+            var nuevaFrase = prompt("Introduzca texto");
+            document.getElementById('texto').innerHTML = nuevaFrase;
+        }
+        function CambiarLetra()
+        {
+            var tipo = prompt("Introduce un tipo de letra");
+            var color = prompt("Introduce un color");
+            document.getElementById('texto').style.color = color;
+            document.getElementById('texto').style.fontFamily = tipo;
+        }
+    </script>
+</head>
+<body>
+    <form name="ejercicio1">
+        <div id="div1">
+            <p id="texto">Este es el contenido del div1</p>
+        </div>
+        <section>
+            <input type="button" value="Cambiar texto" id="texto2" onclick="CambiarTexto();">
+            <br>
+            <input type="button" value="Cambiar color de fondo" id="verde" onClick="Pintar();">
+            <br>
+            <input type="button" value="Cambiar tipo y color de letra" onclick="CambiarLetra();">
+        </section>
+    </form>
+</body>
+</html>

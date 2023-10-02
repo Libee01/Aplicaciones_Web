@@ -1,0 +1,17 @@
+.pregunta{
+    height: auto;
+    width: 50%;
+    margin-top: 2em;
+    margin-left: 20%;
+    margin-right: 30%;
+    border: 2px gray solid;
+    padding-left: 1em;
+}
+.texto{
+    margin-bottom: 0.5em;
+}
+#boton{
+    margin-left: 45%;
+    margin-top: 2em;
+}
+

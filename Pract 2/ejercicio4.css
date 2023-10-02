@@ -1,0 +1,39 @@
+#titulo{
+    height: auto;
+    width: 40%;
+    margin-top: 2em;
+    background-color: orange;
+    margin-right: 30%;
+    color:blue;
+    font-size: 40px;
+    margin-left: 0.25em;
+}
+#cuadro{
+    height: 160px;
+    width: 40%;
+    margin-top: 0.5em;
+    background-color: yellow;
+    border: 3px black solid;
+    margin-left: 0.25em;
+}
+.texto{
+    text-align: center;
+    width: 40%;
+    float: left;
+    margin-top: 0.5em;
+}
+.recuadro{
+    width: 50%;
+    float: left;
+    margin-top: 0.5em;
+}
+.funcion{
+    color:blue;
+    text-decoration: underline;
+    font-size: 20px;
+    padding-top: 0.5em;
+    float: left;
+    padding-right: 0.25em;
+    padding-left: 0.25em;
+    font-weight: bold;
+}
