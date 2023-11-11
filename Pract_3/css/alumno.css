@@ -1,0 +1,37 @@
+h2{
+    margin-top: 0;
+}
+fieldset{
+    width: 46%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 2px solid black;
+}
+#div1{
+    width: 450px;
+    height: 60px;
+    float: left;
+}
+a{
+    padding-left: 8em;
+}
+#div2{
+    width: 400px;
+    height: 60px;
+    float: left;
+}
+t{
+    padding-left: 35%;
+}
+.enseñanzas{
+    padding-left: 3em;
+    width:36%;
+    float: left;
+}
+#div3{
+    width: 100%;
+    float: left;
+}
+#boton{
+    margin-left: 25%;
+}

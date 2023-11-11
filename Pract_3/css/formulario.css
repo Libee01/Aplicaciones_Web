@@ -1,0 +1,10 @@
+#formulario{
+    background-color: rgb(229, 224, 253);
+    width: 60%;
+    margin-left: 1em;
+    border: 3px rgb(160, 145, 247) solid;
+}
+legend{
+    border: 3px rgb(160, 145, 247) solid;
+    background-color: white;
+}

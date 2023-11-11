@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/alumno.css">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <form action="datos_alumno.php" fvalida" method="POST">
+        <fieldset>
+            <h2>DATOS DEL ALUMNO:</h2>
+            <div id="div1">
+                Introduzca su 
+                <br>
+                nombre:
+                <br>
+                <a><input type="text" name="nombre" size="20" maxlength="100"><br></a>
+            </div>
+            <div id="div2">
+                <t>Enseñanza:</t>
+                <br>
+                    <div class="enseñanzas">
+                        <input type="radio" name="enseñanza" value="Secundaria">Secundaria
+                    </div>
+                    <div class="enseñanzas">
+                    <input type="radio" name="enseñanza" value="Bachillerato">Bachillerato
+                    </div>
+                    <div class="enseñanzas">
+                        <input type="radio" name="enseñanza" value="Ciclo Medio">Ciclo Medio
+                    </div>
+                    <div class="enseñanzas">
+                        <input type="radio" name="enseñanza" value="Ciclo Superior">Ciclo Superior
+                    </div>
+            </div>
+            <div id="div3">
+                Introduzca su
+                <br>
+                telefono:
+                <br>
+                <a><input type="text" name="telefono" size="9"></a>
+                    Matriculado<input type="checkbox" name="matriculado">
+            </div>
+            <br>
+            <div>
+                Mostrar datos:
+                <select name="datos">
+                    <option value="pantalla">Por Pantalla
+                    <option value="fichero">En archivo datos.txt
+                </select>
+            </div>    
+        </fieldset>
+        <div id="boton">
+            <input type="submit" value="Enviar datos">
+        </div>
+    </form>
+</body>
+</html>
